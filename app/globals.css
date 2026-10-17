@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --border: #E2E8F0;
+  --primary: #3157D5;
+  --primary-dark: #193B8F;
+  --soft-blue: #EEF4FF;
+  --soft-indigo: #F2F3FF;
+  --foreground: #172033;
+  --muted: #64748B;
+  --success: #0F9F6E;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #172033;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Calluna / Editorial Serif */
+.font-editorial {
+  font-family: 'Calluna', 'Newsreader', 'Merriweather', 'Charter', 'Georgia', serif;
+}
+
+/* JetBrains Mono (Strictly for Technical Metadata) */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Clean Light Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Soft card hover transitions */
+.hover-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -4px rgba(25, 59, 143, 0.08), 0 4px 10px -2px rgba(23, 32, 51, 0.03);
+  border-color: #CBD5E1;
+}
+
+/* Subtle dot pattern for educational sections */
+.bg-edu-pattern {
+  background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Subtle gradient mesh for hero */
+.bg-hero-glow {
+  background: radial-gradient(circle at 50% 0%, #EEF4FF 0%, rgba(248, 250, 252, 0) 70%);
+}
+
+/* Subtle floating animation for credential badges/stickers */
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-subtle {
+  animation: float-subtle 4.5s ease-in-out infinite;
+}
+
